@@ -1,0 +1,337 @@
+/* Importar la fuente Fira Code para el efecto de terminal hacker */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    background-color: #101010;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    background: #101010;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0ef;
+}
+
+.hamburger {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; /* Alinear a la derecha */
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: #0ef;
+    margin: 3px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #0ef;
+}
+
+.hire-btn {
+    background: #0ef;
+    color: #101010;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Sección Hero */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
+    background: #101010;
+    padding: 50px 100px;
+    margin-top: 80px; /* Desplazamiento para evitar el header */
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.hero-text h1 span {
+    color: #0ef;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    color: #0ef;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #101010;
+    background: #0ef;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0ef;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    background: #1a1a1a;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 48px;
+    color: #0ef;
+}
+
+.stat p {
+    font-size: 18px;
+}
+
+/* Efecto de texto dinámico */
+#dynamic-text {
+    border-right: 2px solid #0ef; /* Efecto de cursor parpadeante */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto sobrante cuando se borra */
+    display: inline-block;
+}
+
+.hero-image {
+    position: relative;
+    display: flex; /* Usar flex para centrar la imagen */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center; /* Alinear horizontalmente */
+    overflow: hidden;
+    width: 300px; /* Ancho fijo para el contenedor */
+    height: 300px; /* Alto fijo para el contenedor */
+}
+
+.hero-image img {
+    margin-left: 7.9px;
+    margin-top: 7.5px;
+    border-radius: 50%;
+    width: 95%; /* Ajustar al 100% del contenedor */
+    height: 95%; /* Ajustar al 100% del contenedor */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alinear al contenedor */
+    left: 0; /* Alinear al contenedor */
+    z-index: 1; /* Asegúrate de que la imagen esté encima del borde */
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    height: 290px;
+    width: 290px;
+    border: 5px dashed #0ef; /* Borde punteado */
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    animation: rotateBorder 30s linear infinite; /* Duración ajustada */
+}
+
+@keyframes rotateBorder {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg); /* Rota en sentido de las agujas del reloj */
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 40px 50px;
+    }
+
+    .hero-text {
+        max-width: 60%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .stat h3 {
+        font-size: 36px;
+    }
+
+    .stat p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column;
+        position: absolute;
+        background: #101010;
+        top: 60px; /* Debajo del header */
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar menú al activar */
+    }
+
+    .hamburger {
+        display: flex; /* Mostrar botón de hamburguesa */
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        height: auto; /* Permitir que se ajuste la altura */
+        margin-top: 60px; /* Ajustar el margen superior */
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text h4 {
+        font-size: 16px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .stats {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px; /* Espacio entre los elementos */
+    }
+
+    .stat {
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text h4 {
+        font-size: 14px;
+    }
+
+    .hero-text p {
+        font-size: 12px;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .stat h3 {
+        font-size: 24px;
+    }
+
+    .stat p {
+        font-size: 12px;
+    }
+
+    .social-links a {
+        font-size: 18px;
+    }
+}
