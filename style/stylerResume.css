@@ -1,4 +1,4 @@
-/* Contenedor flex para alinear las secciones */
+/* Estilo general para pantallas grandes (PC) */
 .info-container {
     display: flex;
     justify-content: space-between;  /* Espacio entre los elementos */
@@ -12,7 +12,7 @@
     flex: 1;                        /* Hace que las secciones ocupen el mismo espacio */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0);
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd00;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     width: 700px;
     height: 250px;
@@ -22,7 +22,7 @@
     flex: 1;                        /* Hace que las secciones ocupen el mismo espacio */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0);
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd00;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     width: 700px;
     height: 350px;
@@ -39,39 +39,16 @@
     color: #0ef;
 }
 
-/* Responsivo: En pantallas más pequeñas se colocan una debajo de la otra */
-@media (max-width: 768px) {
-    .info-container {
-        flex-direction: column;  /* En pantallas pequeñas se organizan en columna */
-        align-items: center;
-    }
-}
-
-
-.hero_2 {
+/* Hero sections */
+.hero_2, .hero_3 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 30vh;
+    height: 2;
     text-align: left;
     background: #101010;
     padding: 50px 100px;
-    margin-top: 80px; /* Desplazamiento para evitar el header */
-}
-
-.hero_3 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 20vh;
-    text-align: left;
-    background: #101010;
-    padding: 50px 100px;
-    margin-top: 80px; /* Desplazamiento para evitar el header */
-}
-
-.hero-text {
-    max-width: 65%;
+    margin-top: 10px; /* Desplazamiento para evitar el header */
 }
 
 .hero-text h1 {
@@ -94,11 +71,7 @@
     line-height: 1.5;
 }
 
-
-
-
-
-
+/* Botones */
 .button-container {
     display: flex;
     flex-direction: column; /* Coloca los botones en una sola columna */
@@ -122,15 +95,7 @@
     background-color: rgb(0, 154, 165); /* Efecto hover */
 }
 
-
-
-
-
-
-
-
-
-/* Contenedor general de las tarjetas de experiencia */
+/* Tarjetas de experiencia */
 .experiencia-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -141,7 +106,6 @@
     padding-right: 10px; /* Añadir un pequeño padding para evitar que el contenido quede debajo del scroll */
 }
 
-/* Estilo para las tarjetas */
 .experiencia-card {
     background-color: #1d1d1d;
     color: #e0e0e0;
@@ -173,7 +137,6 @@
     color: #ccc;
 }
 
-/* Para ocultar el scroll horizontal si se llegara a generar */
 .experiencia-grid::-webkit-scrollbar {
     width: 8px;
 }
@@ -185,4 +148,32 @@
 
 .experiencia-grid::-webkit-scrollbar-track {
     background-color: #1d1d1d;
+}
+
+/* Responsivo: Para pantallas más pequeñas (móviles y tablets) */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;  /* En pantallas pequeñas se organizan en columna */
+        align-items: center;
+    }
+    .info-box,
+    .info-box-2 {
+        width: 100%;  /* Ocupar todo el ancho disponible */
+        max-width: 100%;  /* Evitar que se desborden en móviles */
+        height: auto;  /* Ajustar la altura según el contenido */
+    }
+
+    .hero_2,
+    .hero_3 {
+        flex-direction: column; /* Colocar los elementos en columna */
+        padding: 20px;  /* Reducir el padding en móviles */
+    }
+
+    .hero-text h1 {
+        font-size: 32px;  /* Ajustar el tamaño del texto */
+    }
+
+    .hero-text p {
+        font-size: 16px;  /* Reducir el tamaño de la fuente en móviles */
+    }
 }
