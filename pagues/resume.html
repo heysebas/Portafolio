@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/stylerResume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Heysebas.</div>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/index.html" id="home-link">Home</a></li>
+                <li><a href="service.html" id="services-link">Services</a></li>
+                <li><a href="#resume" id="resume-link">Resume</a></li>
+                <li><a href="#work" id="work-link">Work</a></li>
+                <li><a href="#contact" id="contact-link">Contact</a></li>
+                <li><a href="#hire" class="hire-btn" id="hire-link">Hire me</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero_2" id="home">
+        <!-- Sección contenedora de las subsecciones -->
+        <section id="info-section" class="info-container">
+            <!-- Sección: Por qué contratarme -->
+            <div id="why-hire-1" class="info-box">
+                <h2>Por qué contratarme</h2>
+                <p>Soy ingeniero de software con 6 años de experiencia en desarrollo full-stack y DevOps. Domino Java, Spring Boot, Google Cloud y herramientas como Docker y K8s. Mi enfoque está en crear soluciones eficientes y de calidad.</p>
+            </div>
+
+            <!-- Sección: Mi experiencia -->
+            <div id="experience-1" class="info-box">
+                <h2>Mi experiencia</h2>
+                <p>Tengo 6 años de experiencia como ingeniero de software, trabajando en desarrollo full-stack con tecnologías como Java, Spring Boot, y GCP. También cuento con un año de experiencia en DevOps, utilizando Docker, Kubernetes y CI/CD con Concourse.</p>
+            </div>
+        </section>
+    </section>
+    <section class="hero_3" id="home">
+        <section id="info-section" class="info-container">
+            <!-- Sección: Contenedora de botones -->
+            <div id="btn_1" class="info-box-2">
+                <h2>Opciones</h2>
+                <div class="button-container">
+                    <button class="btn" onclick="mostrarContenido('experiencia')">Experiencia</button>
+                    <button class="btn" onclick="mostrarContenido('educacion')">Educación</button>
+                    <button class="btn" onclick="mostrarContenido('habilidades')">Habilidades</button>
+                    <button class="btn" onclick="mostrarContenido('sobre-mi')">Sobre mí</button>
+                </div>
+            </div>
+
+            <!-- Div dinámico para actualizar el contenido -->
+            <div id="contenido-dinamico" class="info-box-2">
+                <h2>Bienvenido</h2>
+                <p>Selecciona una opción para ver más información.</p>
+            </div>
+        </section>
+</section>
+
+
+    <script src="/controller/resume.js"></script>
+    <script src="/controller/script.js"></script>
+</body>
+</html>
