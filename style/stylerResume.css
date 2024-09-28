@@ -51,6 +51,20 @@
     margin-top: 10px; /* Desplazamiento para evitar el header */
 }
 
+.hero_3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2;
+    text-align: left;
+    background: #101010;
+    padding: 5px 100px;
+    
+}
+
+
+
+
 .hero-text h1 {
     font-size: 48px;
     line-height: 1.2;
@@ -176,4 +190,22 @@
     .hero-text p {
         font-size: 16px;  /* Reducir el tamaño de la fuente en móviles */
     }
+}
+
+
+
+
+.habilidades-card img {
+    width: 64px; /* Ajusta el tamaño según sea necesario */
+    height: 64px; /* Asegúrate de que el tamaño sea uniforme */
+    margin-right: 10px; /* Espaciado entre la imagen y los iconos si es necesario */
+    margin-top: 10px;
+    vertical-align: middle; /* Alinea verticalmente con los iconos */
+}
+
+.habilidades-card i {
+    font-size: 64px; /* Ajusta el tamaño de los iconos para que coincidan con la imagen */
+    margin-right: 10px; /* Espaciado entre los iconos */
+    margin-top: 10px;
+    vertical-align: middle; /* Alinea los iconos verticalmente */
 }
