@@ -46,7 +46,7 @@
     align-items: center;
     height: 2;
     text-align: left;
-    background: #101010;
+    background: #000000;
     padding: 50px 100px;
     margin-top: 10px; /* Desplazamiento para evitar el header */
 }
@@ -57,7 +57,7 @@
     align-items: center;
     height: 2;
     text-align: left;
-    background: #101010;
+    background: #000000;
     padding: 5px 100px;
     
 }
@@ -161,7 +161,7 @@
 }
 
 .experiencia-grid::-webkit-scrollbar-track {
-    background-color: #1d1d1d;
+    background-color: #111111;
 }
 
 /* Responsivo: Para pantallas más pequeñas (móviles y tablets) */

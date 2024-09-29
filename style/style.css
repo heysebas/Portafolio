@@ -81,7 +81,7 @@ nav {
     align-items: center;
     height: 70vh;
     text-align: left;
-    background: #101010;
+    background: #000000;
     padding: 50px 100px;
     margin-top: 80px; /* Desplazamiento para evitar el header */
 }

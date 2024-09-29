@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/styleContact.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Heysebas.</div>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html" id="home-link">Home</a></li>
+                <!-- <li><a href="pagues/service.html" id="services-link">Services</a></li> -->
+                <li><a href="resume.html" id="resume-link">Resume</a></li>
+                <!-- <li><a href="#work" id="work-link">Work</a></li> -->
+                <li><a href="contact.html" id="contact-link">Contact</a></li>
+                <!-- <li><a href="#hire" class="hire-btn" id="hire-link">Hire me</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="contact-section">
+        <div class="form-container">
+            <h1>Trabajemos juntos</h1>
+            <p>¿Tienes ideas o proyectos en mente? ¡Transforma tus conceptos en soluciones digitales <br>poderosas! Como programador de software, estoy aquí para hacer realidad tus ideas con eficiencia y creatividad.</p>
+            <form>
+                <div class="input-row">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                </div>
+                <div class="input-row">
+                    <input type="email" placeholder="Correo Electronico" required>
+                    <input type="tel" placeholder="Numero Telefonico" required>
+                </div>
+                <div class="input-row">
+                    <select required>
+                        <option value="" disabled selected>Tipos De Servicios</option>
+                        <option value="design">Desarrollador</option>
+                        <option value="development">Diseñador web</option>
+                        <option value="marketing">Full Stack</option>
+                    </select>
+                </div>
+                <textarea placeholder="Descripción." required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <p>(+57) 317 238 1281</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>sebazgrisales@gmail.com</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Colombia, Armenia Quindio</p>
+            </div>
+        </div>
+        
+    </section>
+   
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</html>
